@@ -1,8 +1,12 @@
 '''
 1 - Crear un Script llamado factorial.py que calcule 10! (factorial) e imprima el resultado en pantalla.
 '''
-import math
 
-resultado = math.factorial(10)
+resultado = 1
 
-print("El factorial de 10 es:", resultado)
+for i in range(1, 11): 
+    resultado *= i 
+    
+print(f"El factorial de 10 es: {resultado}")
+
+

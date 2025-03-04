@@ -7,19 +7,31 @@ grande y cuál el más chico.
 
 '''
 
+
 cantidad = int(input("Ingrese la cantidad de números a comparar: "))
 
-if cantidad <= 0:
-    print("Debe ingresar al menos un número.")
-else:
-    numeros = []
-    for i in range(cantidad):
-        num = int(input(f"Ingrese el número {i+1}: "))
-        numeros.append(num)
-    
-    print("Los números ingresados son: ")
-    for num in numeros:
-        print(num)
+numeros = []
+i = 0
 
-    print(f"El número más grande es: {max(numeros)}")
-    print(f"El número más chico es: {min(numeros)}")
+while True:
+    if i >= cantidad:
+        break
+
+    num = int(input(f"Ingrese el número {i+1}: "))
+    numeros.append(num)
+    i += 1
+
+print("Los números ingresados son:")
+
+j = 0
+
+while True:
+    if j >= cantidad:
+        break
+    print(numeros[j])
+    j += 1
+
+print(f"El número más grande es: {max(numeros)}")
+print(f"El número más chico es: {min(numeros)}")
+
+

@@ -8,7 +8,7 @@ print("Introduce caracteres. Presiona Enter sing nada para finalizar.")
 while True:
     userInput = input()
     if userInput == "":
+        print("\nFin del script")
         break
-    print(userInput, end="\n")
 
-print("\nFin del script")
+

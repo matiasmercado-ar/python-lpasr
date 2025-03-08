@@ -1,3 +1,10 @@
+'''
+Cree un programa que defina una calculadora básica con las 4 principales operaciones aritméticas.
+Utilizar para cada una de ellas una función que reciba como parámetros los valores intervinientes en
+la operación (dos argumentos) y muestre la operación y el resultado de esta por pantalla.
+
+'''
+
 def suma(a, b):
     resultado = a + b
     print(f"{a} + {b} = {resultado}")

@@ -16,7 +16,7 @@ cliente.
 
 import socket
 
-servidor_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+servidor_socket = socket.socket()
 host = '192.168.100.14'
 puerto = 65432
 servidor_socket.bind((host, puerto))
@@ -27,7 +27,7 @@ print(f"Servidor escuchando en {host}:{puerto}...")
 while True:
     conexion, direccion = servidor_socket.accept()
     print(f"Conexión establecida desde {direccion}")
-    mensaje = conexion.recv(1024).decode()
+    mensaje = conexion.recv(1024)
     print(f"Mensaje recibido: {mensaje}")
     conexion.sendall(b"Mensaje recibido")
     conexion.close()
